@@ -173,7 +173,7 @@
                 <div class="col-md-6">
                     <div class="wow fadeInUp" data-wow-delay="0.2s">
                         <p class="mb-4">Complete el formulario con su consulta y nos comunicaremos a la brevedad</a>.</p>
-                        <form action="https://formspree.io/f/xovqqrnr" method="POST">
+                        <form action="https://formspree.io/f/xovqqrnr" method="POST" id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -211,6 +211,18 @@
         </div>
     </div>
     <!-- Contact End -->
+
+    <!-- Script to Trigger Google Ads Conversion on Form Submission -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission to add delay
+        gtag('event', 'conversion', {'send_to': 'AW-16744480675/nCE3CN_R998ZEKP_sbA-'});
+        setTimeout(function() {
+            // Allow form to submit after a short delay
+            event.target.submit();
+        }, 500); // Delay to ensure the event is sent
+    });
+</script>
 
 
     <!-- Footer Start -->
