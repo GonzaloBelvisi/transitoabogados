@@ -39,6 +39,15 @@
         gtag('js', new Date());
         gtag('config', 'AW-16744480675');
     </script>
+
+    <!-- Event snippet for WhatsApp conversion page -->
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('[href*="wa.link"]').addEventListener('click',function(){
+      gtag('event', 'conversion', {'send_to': 'AW-16744480675/_B9MCOWk-ewZEKP_sbA-'});
+})
+})
+</script>
 </head>
 
 <body>
